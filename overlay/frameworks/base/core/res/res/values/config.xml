@@ -410,5 +410,8 @@
         <!-- ID0:Fingerprint:Strong -->
         <item>0:2:15</item>
     </string-array>
+
+    <!-- Screen off delay -->
+    <integer name="config_screen_off_delay">1</integer>
 </resources>
 

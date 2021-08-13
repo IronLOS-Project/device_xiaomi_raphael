@@ -258,6 +258,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.performance_level.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.performance_level.rc
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \

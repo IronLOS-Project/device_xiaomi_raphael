@@ -37,6 +37,10 @@
 #define FOD_SENSOR_Y 1931
 #define FOD_SENSOR_SIZE 190
 
+#define DIM_LAYER_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm"
+
+#define DIM_LAYER_HBM_ON 1
+#define DIM_LAYER_HBM_OFF 0
 
 namespace {
 
@@ -45,8 +49,8 @@ static void set(const std::string& path, const T& value) {
     std::ofstream file(path);
     file << value;
 }
-
 }  // anonymous namespace
+
 namespace vendor {
 namespace lineage {
 namespace biometrics {
@@ -81,6 +85,7 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 
 Return<void> FingerprintInscreen::onPress() {
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
+    set(DIM_LAYER_HBM_PATH, DIM_LAYER_HBM_ON);
     return Void();
 }
 
@@ -96,6 +101,7 @@ Return<void> FingerprintInscreen::onShowFODView() {
 
 Return<void> FingerprintInscreen::onHideFODView() {
     set(FOD_STATUS_PATH, FOD_STATUS_OFF);
+    set(DIM_LAYER_HBM_PATH, DIM_LAYER_HBM_OFF);
     return Void();
 }
 

@@ -33,4 +33,8 @@
     <!-- Default state for LiveDisplay -->
     <bool name="config_liveDisplayAvailable">true</bool>
     <bool name="config_defaultCABC">true</bool>
+
+    <!-- Smart Charging -->
+    <bool name="config_deviceSupportSmartCharging">true</bool>
+    <bool name="config_smartChargingAvailable">true</bool>
 </resources>

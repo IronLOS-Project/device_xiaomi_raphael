@@ -143,4 +143,4 @@ persist.timed.enable=true
 config.disable_rtt=true
 
 # Maintainer
-ro.octavi.maintainer=nj
+ro.aosp.maintainer=nj

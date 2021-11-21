@@ -15,13 +15,10 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some PEX stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
-CUSTOM_BUILD_TYPE := OFFICIAL
+$(call inherit-product, vendor/iron/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_raphael
+PRODUCT_NAME := iron_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro

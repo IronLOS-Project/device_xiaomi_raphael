@@ -39,7 +39,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosp \
+    $(LOCAL_PATH)/overlay-iron \
     $(LOCAL_PATH)/overlay-system
 
 # ANT+
@@ -143,6 +143,7 @@ include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-
 include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
 
 PRODUCT_PACKAGES += \
+    vendor.display.config@1.0 \
     libtinyxml \
     libdisplayconfig \
     libqdMetaData \
